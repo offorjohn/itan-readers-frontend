@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import ResponsiveBookSlider from "@/utils/reader/ResponsiveBookSlider";
 import FAQ from "@/components/reader/FQA";
 import Link from "next/link";
 
@@ -35,62 +36,59 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
-          <div className="absolute top-6 left-6 text-4xl font-bold text-red-600">
-            ITAN
-          </div>
+      <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
-          <div className="absolute top-6 right-6">
-            <Link
-              href="/reader/sign_up"
-              className="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition shadow"
-            >
-              Sign Up
-            </Link>
-          </div>
+  {/* Top bar with ITAN and Sign Up */}
+  <div className="absolute top-6 left-0 w-full flex justify-between items-center px-6">
+    <div
+      className="text-4xl font-bold text-red-600"
+      aria-label="ITAN logo"
+    >
+      ITAN
+    </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Home of Black Fiction Novels
-          </h1>
+    <Link
+      href="/reader/sign_up"
+      className="bg-red-600 text-white px-5 py-2.5 rounded-md hover:bg-red-700 transition shadow"
+      aria-label="Sign up as a reader"
+    >
+      Sign Up
+    </Link>
+  </div>
 
-          <p className="text-lg md:text-2xl mb-6 leading-relaxed mt-5">
-            Explore the richest collection of black fiction in one app
-          </p>
+  {/* Hero Content */}
+  <h1 className="text-4xl md:text-6xl font-bold mb-4 mt-24" aria-label="Main headline">
+    Home of Black Fiction Novels
+  </h1>
 
-          <Link
-            href="/reader/sign_up"
-            className="bg-red-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-red-700 transition mt-5"
-          >
-            Get started
-          </Link>
-        </div>
+  <p
+    className="text-lg md:text-2xl mb-6 leading-relaxed mt-5"
+    aria-label="Tagline for black fiction collection"
+  >
+    Explore the richest collection of black fiction in one app
+  </p>
+
+  <Link
+    href="/reader/sign_up"
+    className="bg-red-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-red-700 transition mt-5"
+    aria-label="Get started with ITAN"
+  >
+    Get started
+  </Link>
+</div>
+
       </section>
 
       {/* Book Covers Section */}
-      <section className="py-14 bg-[#050A30] px-4">
-        <h3 className="text-2xl md:text-4xl text-center text-white mb-10 md:mb-14">
-          Find your Match in More than 100 <br className="hidden md:block" />
-          Genres and Categories
-        </h3>
-        <div className="flex flex-wrap justify-center gap-4">
-          {[
-            ["ancestral-code", "ancestral code"],
-            ["Lazarus", "Lazarus Convergence"],
-            ["titan-race", "Titan race"],
-            ["in-bed-with-her-guy", "in bed with her guy"],
-            ["sons-of-the-7th-dawn", "sons of the 7th dawn"],
-          ].map(([filename, alt]) => (
-            <Image
-              key={filename}
-              src={`/images/readers/onboarding/${filename}.png`}
-              alt={alt}
-              width={120}
-              height={300}
-              className="w-24 sm:w-28 md:w-[150px] h-auto"
-            />
-          ))}
-        </div>
-      </section>
+{/* Book Covers Section */}
+<section className="py-14 bg-[#050A30] px-4">
+  <h3 className="text-2xl md:text-4xl text-center text-white mb-10 md:mb-14">
+    Find your Match in More than 100 <br className="hidden md:block" />
+    Genres and Categories
+  </h3>
+  <ResponsiveBookSlider />
+</section>
+
 
       {/* Storytelling Power Section */}
       <section className="relative bg-black py-20 overflow-hidden text-center text-white px-4">
@@ -103,26 +101,26 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 max-w-xl mx-auto text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-snug">
-          <p>Feel the Fire of Black storytelling</p>
-          <p className="my-4">where every book is a portal and</p>
-          <p>every word is power</p>
-        </div>
+     <div className="relative z-10 max-w-4xl mx-auto text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-snug lg:leading-tight text-center lg:text-left px-4">
+  <p>Feel the Fire of Black storytelling</p>
+  <p className="my-4">where every book is a portal and</p>
+  <p>every word is power</p>
+</div>
+
       </section>
 
-      {/* Phone and Quote Section */}
-    <section className="flex flex-col md:flex-row items-center justify-between bg-[#050A30] px-4 py-10 gap-6 md:gap-12">
+ {/* Phone and Quote Section */}
+<section className="flex flex-col md:flex-row items-center justify-center bg-[#050A30] px-4 py-10 gap-6 md:gap-12">
   <Image
     src="/images/readers/onboarding/phone-picture.png"
     width={300}
     height={400}
     alt="phone image"
-    className="w-full max-w-[200px] md:max-w-[180px] lg:max-w-[220px] xl:max-w-[250px] mx-auto md:mx-0"
+    className="w-full max-w-[200px] md:max-w-[250px] lg:max-w-[300px] xl:max-w-[350px] mx-auto md:mx-0 drop-shadow-xl"
   />
-  <p className="text-white text-xl md:text-2xl lg:text-3xl xl:text-[40px] text-center md:text-left leading-relaxed md:flex-1">
-    ‘Step into the world of African Storytelling — where mystery meets
-    magic, thrillers tangle with romance, and comics collide with sci-fi
-    all set to whisk you to the island “EXCITE”’
+  <p className="text-white text-xl md:text-2xl lg:text-3xl xl:text-[40px] text-center md:text-left leading-relaxed md:flex-1 max-w-2xl">
+    ‘Step into the world of African Storytelling — where mystery meets magic,
+    thrillers tangle with romance, and comics collide with sci-fi — all set to whisk you to the island “EXCITE”.’
   </p>
 </section>
 

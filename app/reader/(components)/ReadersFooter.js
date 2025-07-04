@@ -26,219 +26,124 @@ const Footer = ({ hiddenPage }) => {
     pathname.startsWith("/author") || pathname.startsWith("/dashboard");
 
   return (
-    <footer
-      className={`${hiddenPage} bg-[#111928]`}
-    >
-
-
-      <section className="bg-[#111928] md:mx-5">
-        <div className="flex items-center ml-8 mb-3 pt-3">
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              width={60}
-              height={20}
-              alt="itan logo"
-              className="lg:w-12 -ml-4 lg:-mb-2"
-            />
-          </Link>
-          {/* <p
-            className={`${bricolage.className} text-gray-200 text-[21px] md:text-[24px] lg:text-3xl font-bold -mb-1 lg:-mb-3 -ml-3`}
-          >
-            Global Publishing
-          </p> */}
-        </div>
-
-        {/* About Itan */}
-        <div className="sm:flex justify-between lg:max-w-[1200px]">
-          <div className="text-gray-200 text-xs max-w-[600px] lg:max-w-[700px] mx-4 mr-10 lg:text-sm">
-            <p className="mb-2 ">
-              ITAN Global Publishing (IGP) is a digital self-publishing and
-              aggregator that connects African literature to new audiences
-              across the globe, creating a vibrant market for African
-              narratives. We are focused on empowering writers, authors,
-              storytellers, and publishers from underrepresented African
-              nations.
-            </p>
-
-            <p>
-              Our vision is to bring African stories to the global market in
-              ways that make them accessible, and engaging. <br />
-              By leveraging technology, we are redefining modern{" "}
-              <br className="lg:hidden" />
-              publishing—offering services that include manuscript formatting,
-              digital publishing, strategic marketing, and seamless
-              distribution.
-            </p>
-          </div>
-
-          <div className="text-[13px] sm:grid grid-cols-2 gap-x-3 lg:gap-x-10 hidden h-28 text-gray-400 min-w-[250px]">
-            <Link
-              href="https://itanglobalpublishing.substack.com/"
-              target="_blank"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Author Resources
+    <footer className={`${hiddenPage} bg-[#050A30]`}>
+      <section className="bg-[#050A30] md:mx-5 px-6 md:px-20 py-10 text-white">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row justify-between gap-10">
+          {/* Logo & Socials */}
+          <div className="flex flex-col items-start space-y-4">
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                width={60}
+                height={20}
+                alt="itan logo"
+                className="lg:w-12 -ml-2"
+              />
             </Link>
-            <Link
-              href="https://itanglobalpublishing.substack.com/"
-              target="_blank"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Blog
-            </Link>
-            <Link
-              href="mailto:support@itan.app"
-              target="_blank"
-              aria-label="Contact support via email"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Help Center
-            </Link>
-            <Link
-              href="#"
-              target="_blank"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Content Policy
-            </Link>
-            <Link
-              href="https://www.youtube.com/@itanIGP"
-              target="_blank"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Youtube
-            </Link>
-            <Link
-              href="#"
-              target="_blank"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center text-gray-200 mt-4">
-          {/* Social icons */}
-          <div className="flex items-center justify-center sm:justify-start sm:ml-9 w-full">
-            <div className="flex space-x-2">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon
-                  icon={faLinkedinIn}
-                  className="w-[15px] h-5 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353]"
-                />
-              </Link>
-              <Link
-                href="https://x.com/ItanGlobal"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className="flex space-x-3 mt-2">
+              <Link href="https://x.com/ItanGlobal" target="_blank">
                 <FontAwesomeIcon
                   icon={faXTwitter}
-                  className="w-[15px] h-5 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353]"
+                  className="w-4 h-4 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353] transition-all"
                 />
               </Link>
               <Link
                 href="https://web.facebook.com/itanglobalpublishing/"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className="w-[15px] h-5 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353]"
+                  className="w-4 h-4 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353] transition-all"
+                />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/itan-global-publishing/"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  className="w-4 h-4 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353] transition-all"
                 />
               </Link>
               <Link
                 href="https://www.instagram.com/itanglobalpublishing"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="w-[15px] h-3 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353] hover:scale-110 transition-all duration-300"
+                  className="w-4 h-4 p-2 rounded-full border-2 border-[#EF5353] hover:bg-[#EF5353] transition-all"
                 />
               </Link>
             </div>
           </div>
 
-          {/* Placeholder content */}
-          <div className=" flex flex-col items-center mt-3 text-[12px] text-gray-400">
-            <div className="flex flex-col items-center sm:hidden space-y-3">
-              <Link
-                href="https://itanglobalpublishing.substack.com/"
-                target="_blank"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Author Resources
-              </Link>
-              <Link
-                href="mailto:support@itan.app"
-                target="_blank"
-                aria-label="Contact support via email"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Help Center
-              </Link>
-              <Link
-                href="https://www.youtube.com/@itanIGP"
-                target="_blank"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Youtube
-              </Link>
-              <Link
-                href="https://itanglobalpublishing.substack.com/"
-                target="_blank"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Blog
-              </Link>
-              <Link
-                href="#"
-                target="_blank"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Contact
-              </Link>
-              <Link
-                href="#"
-                target="_blank"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Content Policy
-              </Link>
-            </div>
-            <div className="mt-6">
-              <Link
-                className="mr-4 hover:text-[#EF5353] cursor-pointer"
-                href="/terms&conditions"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Terms & Conditions
-              </Link>
-              <Link
-                className="hover:text-[#EF5353] cursor-pointer"
-                href="/privacy-policies"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
+          {/* Link Grid */}
+         <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-sm font-semibold text-gray-300">
+  <Link
+    href="https://itanglobalpublishing.substack.com/"
+    target="_blank"
+    className="hover:text-[#EF5353]"
+  >
+    Cookie preferences
+  </Link>
+  <Link
+    href="https://itanglobalpublishing.substack.com/"
+    target="_blank"
+    className="hover:text-[#EF5353]"
+  >
+    Newsletter
+  </Link>
+  <Link
+    href="mailto:support@itan.app"
+    target="_blank"
+    className="hover:text-[#EF5353]"
+  >
+    FAQ
+  </Link>
+  <Link
+    href="#"
+    target="_blank"
+    className="hover:text-[#EF5353]"
+  >
+    Publish with IGP
+  </Link>
+  <Link
+    href="#"
+    target="_blank"
+    className="hover:text-[#EF5353]"
+  >
+    Contact Us
+  </Link>
+</div>
+
         </div>
 
-        {/* Separator */}
-        <div className="mx-4 xs:mx-5 medium:mx-10 large:mx-16 xl:mx-20 mt-4 medium:mt-5 large:mt-6">
+        {/* Divider */}
+        <div className="mt-8">
           <span className="block h-[2px] w-full bg-[#EF5353]/30"></span>
         </div>
 
-        {/* Copyright */}
-        <div className="text-gray-200 flex justify-center mx-4 xs:mx-5 medium:mx-10 large:mx-16 xl:mx-20 mt-3 pb-6 medium:pb-8 large:pb-10 text-sm md:text-base">
-          <p style={{ fontFamily: "Lato, sans-serif" }}>
-            ITAN Technologies Ltd. &copy; 2025. All Rights Reserved
+        {/* Bottom Section */}
+        <div className="text-center text-gray-400 text-sm mt-6">
+          <div className="space-x-4 mb-2">
+            <Link
+              href="/terms&conditions"
+              target="_blank"
+              className="hover:text-[#EF5353]"
+            >
+              Terms & Conditions
+            </Link>
+            <Link
+              href="/privacy-policies"
+              target="_blank"
+              className="hover:text-[#EF5353]"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+          <p className="text-[13px] md:text-sm" style={{ fontFamily: "Lato, sans-serif" }}>
+            ITAN Technologies Ltd. © 2025. All Rights Reserved
           </p>
         </div>
       </section>

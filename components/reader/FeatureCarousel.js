@@ -22,7 +22,6 @@ const features = [
     description:
       "Spark curiosity with enchanting tales and first reads made to grow with your child.",
   },
-
   {
     title: "One Place. Infinite Stories. All Ages.",
     description:
@@ -45,7 +44,7 @@ export default function FeatureCarousel() {
     <section className="bg-black py-16 px-4 text-white">
       <Swiper
         modules={[Autoplay, Pagination]}
-        spaceBetween={20}
+        spaceBetween={16}
         slidesPerView={1.2}
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -58,8 +57,8 @@ export default function FeatureCarousel() {
       >
         {features.map((feature, idx) => (
           <SwiperSlide key={idx}>
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-800 p-6 rounded-xl shadow-lg h-full">
-              <h4 className="text-lg font-semibold mb-2">{feature.title}</h4>
+            <div className="w-full h-[200px] md:h-[220px] flex flex-col justify-between bg-gradient-to-br from-blue-600 to-indigo-800 p-4 md:p-6 rounded-xl shadow-lg">
+              <h4 className="text-base md:text-lg font-semibold mb-2">{feature.title}</h4>
               <p className="text-sm">{feature.description}</p>
             </div>
           </SwiperSlide>

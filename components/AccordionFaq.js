@@ -1,4 +1,4 @@
-"use client";
+"usewww client";
 import { useState } from "react";
 
 export default function AccordionFaq() {
